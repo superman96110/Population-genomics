@@ -1,0 +1,15 @@
+需要准备区域的vcf文件，并且bgzip tabix -p vcf 否则计算很慢
+准备注释的gff文件
+文件gwas或者fst的结果文件，也是区域的最好
+在179服务器
+路径为
+
+
+提取vcf文件中部分区域的基因组信息代码
+bcftools view -r 6:82440000-82500000 -Oz -o region.vcf.gz 825_filter_maf005_geno01_mind01.vcf.gz
+tabix -p vcf region.vcf.gz
+
+
+提取gwas的部分结果代码
+awk -F'\t' 'NR==1 || ($1==6 && $3>=82440000 && $3<=82500000)' 825_filter_maf005_geno01_mind01_gemma_pc1-5_sex_results.assoc.txt > /data/supeng/bodysize/horse/ind_freq/chr6_82440000_82500000.sub.txt
+
