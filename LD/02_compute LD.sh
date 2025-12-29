@@ -1,0 +1,1 @@
+ ./LDBlockShow -InVCF /angr/wangsn/jyz/szd_data/final/pig.final.recode.vcf -OutPut re5 -InGWAS /angr/wangsn/jyz/szd_data/fst/sorted.final.highlow.txt -InGFF /discard/renqz/maguan_goat/index/GCF_001704415.2_ARS1.2_genomic.gff -Region 8:43657619:43657819 -SpeSNPName spe.snp -OutPng -SeleVar 3 
