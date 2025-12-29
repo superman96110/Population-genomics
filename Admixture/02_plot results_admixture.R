@@ -1,3 +1,4 @@
+#group.txt文件只有两列，第一列为个体ID，第二列为品种
 # 设置工作目录
 setwd("F:/caas/毕业课题/第二章_机器学习/sheep/admixture/")
 
