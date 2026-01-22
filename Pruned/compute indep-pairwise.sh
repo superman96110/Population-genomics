@@ -1,3 +1,5 @@
+#awk '{$2=$1":"$4; print}' pig_953_phased_filtered.bim > pig_953_phased_filtered.chrpos.bim
+#sed -i 's/ /\t/g' pig_953_phased_filtered.chrpos.bim
 #确保bim文件的第二列，SNP名称不能为"."，应为chr:position，或者rs号
 #(base) [supeng@jianglin gwas]$ head 664_sheep_filter_maf005_geno01_mind01.bim
 #1       1:3786  0       3786    A       G
